@@ -414,8 +414,6 @@
     
 }
 
-#pragma mark - UIImagePickerController
-
 + (void)customizeImagePickerControllerWithPrimaryColor:(UIColor *)primaryColor withContentStyle:(UIContentStyle)contentStyle {
     
     UIColor *contentColor;
@@ -439,17 +437,11 @@
     }
     
     //Workaround for Swift http://stackoverflow.com/a/28765193
-    [[UIButton appearanceWhenContainedWithin:@[[UIView class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
-    [[UIButton appearanceWhenContainedWithin:@[[UIView class],[UIImagePickerController class]]] setTintColor:ClearColor];
-    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
-    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class],[UIImagePickerController class]]] setTintColor:contentColor];
-    [[UIButton appearanceWhenContainedWithin:@[[UITableViewCell class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
-    
-    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
-    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class],[UIImagePickerController class]]] setTintColor:contentColor];
-    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
-    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class],[UIImagePickerController class]]] setTintColor:contentColor];
-    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableViewCell class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UIView class]]] setBackgroundColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UIView class]]] setTintColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class]]] setBackgroundColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class]]] setTintColor:contentColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UITableViewCell class]]] setBackgroundColor:ClearColor];
 }
 
 #pragma mark - UILabel
